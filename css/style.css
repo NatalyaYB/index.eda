@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif; /* шрифт сайта*/
+}
+.container {
+  max-width: 1194px;
+  margin: auto;
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+.search-form {
+  margin-left: 76px;
+  background: rgba(238, 238, 238, 0.71);
+  border-radius: 10px; /* обводка:скругленная*/
+  display: flex;
+  max-width: 620px; /*  максимальная ширина*/
+  flex-grow: 1; /*  увеличение,т.е. растягивается на всю ширину*/
+  position: relative; /* относительной данной кнопки выровнять search-button */
+}
+.search-input {
+  background-color: transparent; /* фон:прозрачный*/
+  border: none; /* обводка:прозрачная*/
+  width: 100%;
+  padding-left: 20px; /* отступ слева */
+  padding-right: 20px; /* отступ справа */
+  padding-top: 13px; /* отступ сверху */
+  padding-bottom: 13px; /* отступ снизу */
+}
+.search-button {
+  background-color: transparent;
+  border: none; /* обводка:прозрачная*/
+  position: absolute; /* свободно перемещается по всему полю "блюда"*/
+  right: 0;
+  top: 0; /* прилипла к верхнему краю*/
+  height: 100%; /*  лупа стала высотой как вся форма*/
+  padding-left: 18px; /* отступ слева */
+  padding-right: 18px; /* отступ справа */
+  cursor: pointer; /* курсор меняется на руку, если мы хотим нажать на кнопку поиска */
+}
+.auth {
+  margin-left: auto;
+}
+.login {
+  background: #ebebeb;
+  border-radius: 50px;
+  padding: 16px 30px; /* краткая запись отступов:сверху и снизу 16, по краям 30 пкс */
+  display: block; /* войти кликабельная по всей поверхности*/
+  text-decoration: none; /*tdn(краткая запись)-кнопка без подчеркиваний */
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+.shopping-cart {
+  position: relative;
+  text-decoration: none;
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  background-color: #f66a15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin-left: 30px;
+}
+.shopping-counter {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #ffaf19;
+  font-size: 8px;
+  line-height: 9px;
+  color: #000000;
+  display: block;
+  padding: 5px;
+  border-radius: 50%;
+}
