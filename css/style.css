@@ -50,7 +50,7 @@ body {
   border-radius: 50px;
   padding: 16px 30px; /* краткая запись отступов:сверху и снизу 16, по краям 30 пкс */
   display: block; /* войти кликабельная по всей поверхности*/
-  text-decoration: none; /*tdn(краткая запись)-кнопка без подчеркиваний */
+  text-decoration: none; /*tdn-кнопка без подчеркиваний */
   font-size: 14px;
   line-height: 16px;
   color: #000000;
@@ -79,4 +79,146 @@ body {
   display: block;
   padding: 5px;
   border-radius: 50%;
+}
+.slide {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden; /* прятать,если что-то вываливается за пределы*/
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  padding: 100px;
+}
+.slide-text-light {
+  background-color: grey;
+  color: white;
+}
+.slide-content {
+  position: relative;
+  max-width: 400px;
+}
+.slide-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold; /* жирность шрифта */
+  font-size: 50px; /* размерность шрифта */
+  line-height: 51px; /* высота шрифта */
+}
+.slide-text {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 23px;
+}
+.button-primary {
+  background: #f47322;
+  color: #fff;
+}
+.button-default {
+  background: #fff;
+  color: #5f5f61;
+  border-radius: 50px;
+  width: 232px;
+  height: 49px;
+  left: 155px;
+  top: 831px;
+}
+.button {
+  border-radius: 25px;
+  padding: 12px 50px;
+  display: inline block; /* чтобы оранжевая кнопка не вылезала за пределы*/
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+}
+.slide-summer {
+  background-image: url("/img/summer.png"); /* фоновая картинка в css*/
+  background-repeat: no-repeat; /* картинка не повторяется ни по горизонтали, ни по вертикали*/
+  background-size: cover; /* изображение вытягивается по ширине и выглядит аккуратнее по ширине и высоте*/
+}
+.slide:before {
+  /* псевдоэлемент before (его нет в html */
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.43) 40.45%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.promo {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 32px;
+  max-width: 570px;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column; /* текст в колонку */
+  justify-content: space-between; /* текст разбился на 2 блока:верхний и нижний */
+  padding-right: 54px;
+}
+.card:before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+.card-text-light {
+  color: #fff;
+}
+.card-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 23px;
+  margin-top: 4px;
+  margin-bottom: 21px;
+}
+.card-description {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  max-width: 200px;
+}
+.card-price {
+  display: block; /* текст  занимает всю строчку */
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 23px;
+  margin-bottom: 8px;
+}
+.card-delivery {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  display: block;
+  margin-bottom: 25px;
+}
+.card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  object-fit: cover; /* картинка обрезается, если она не по размерам */
+}
+.minimum-effort {
+  top: -380px;
+  right: -624px;
 }
